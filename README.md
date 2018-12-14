@@ -24,18 +24,24 @@ contained and commented upon in the `Exploratory doc2vec.ipynb` notebook.
 Briefly, the analysis proceeds by:
 
   1) importing the corpus. 
+  
     1.1)During the import, each fragment is filtered for dutch stopwords based on the `stopwords-nl-stopwords-iso_expanded.txt` list, punctuation is removed, and all words are cast to lower case.
+    
     1.2) A clear text version of the corpus is imported in parallel for human readable comparison.
    
    2) instantiating a doc2vec model.
      Given the samll size of the corpus, weh have chosen for a 50 dimensional model, making use only of words which appear at
      least twice in the corpus. Here we have chosen for a distributed memory approach
+     
      2.1) The model is trained for 30 epochs on the full corpus. Longer training is subjectively perceiveed to result in
      overfitting
+     
      2.2) Sanity check on similarity-to-self performed 
      
    3) Defining and processing 'seed' fragments to test recovery performance
+   
     3.1) self-styled fragments
+    
     3.2) corpus fragment 
     
    4) Infering vectors for seed fragments
