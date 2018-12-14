@@ -45,23 +45,40 @@ Briefly, the analysis proceeds by:
     3.2) corpus fragment 
     
    4) Infering vectors for seed fragments
+   
     4.1) significant variance found for inferred vectors
+    
     4.2) infer vector for each fragment 100 times and use element wise median
     
    5) Inspecting the recovered most similar fragments in the corpus
+   
     5.1) Possible issue, small corpus large varianz in vectors corpus vectors partially based on early epochs. 
     
    6) Reinferring all corpus vectors using stable model
+   
     6.1) As for the seed fragment reinfer 100 times and use median 
     
    7) Recovering similar (cosine similarity) corpus fragments for seed fragments
+   
     7.1) return 25 most similar and label these as relevant or not
+    
     7.2) determing mean vector of relevant fragments and returing 25 most similar fragments, labeling on releavance. Perform 2
     iterations
     
    8) Comparing performance with random selection
+   
     8.1) select 25 random fragments and label on relevance. repeat.
     
+    
+   The above approach represents a fully interasctive incremental search. Given the vector space representation of the corpus we
+   also consider classic clusterin approaches on the corpus as documented in `Exploratory_d2v_clustering.ipynb`.
+   We intially cosider a `dbscan` clustering using cosine distance/similarity, an epsilon of 0.05, and a minimal cluster size of
+   5. This returns no semantic signal (the foreign language interviews, as well as all NIOD intro sections appear clusterd; these
+   have been/will be removed in the cleaned corpus)
+   We further consider a T-SNE embedding in 3 dimensions, also visualizing the returned relevant fragments over one iteration 
+   chain from the previous analysis. No structure or clustering is apparent.
+   
+   
     
     
     
