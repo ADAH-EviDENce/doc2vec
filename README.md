@@ -70,6 +70,7 @@ Briefly, the analysis proceeds by:
     8.1) select 25 random fragments and label on relevance. repeat.
     
     
+  ## Exploratory clustering
    The above approach represents a fully interasctive incremental search. Given the vector space representation of the corpus we
    also consider classic clusterin approaches on the corpus as documented in `Exploratory_d2v_clustering.ipynb`.
    We intially cosider a `dbscan` clustering using cosine distance/similarity, an epsilon of 0.05, and a minimal cluster size of
