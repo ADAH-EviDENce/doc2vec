@@ -80,9 +80,13 @@ Briefly, the analysis proceeds by:
    chain from the previous analysis. No structure or clustering is apparent.
    
    
-    ## Evalute performance of vanilla doc2vec model
+   ## Evalute performance of vanilla doc2vec model
     the following details the approach to evaluting the performance of the doc2vec model trained on the full corpus using the 
     annottated set of 1000 fragments
+   
+   
+   
+    
     
     
   
